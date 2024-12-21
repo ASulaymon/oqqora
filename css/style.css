@@ -1,0 +1,488 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+*::after, ::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #fff;
+  --main: #000;
+  --trs: 0.3s;
+  --border: 2px solid var(--main);
+}
+
+::-moz-selection {
+  background: var(--main);
+  color: var(--bg);
+}
+
+::selection {
+  background: var(--main);
+  color: var(--bg);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  width: 100%;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body ::-webkit-scrollbar-thumb {
+  background: #000 !important;
+}
+body.dark {
+  --bg: #000;
+  --main: #fff;
+  --border: 2px solid var(--main);
+}
+body .cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: var(--bg);
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: 0.1s;
+  z-index: 999;
+  pointer-events: fill;
+  cursor: none;
+}
+body .hvr {
+  position: relative;
+  width: -moz-max-content !important;
+  width: max-content !important;
+}
+body .e {
+  position: absolute;
+  font-size: 38px;
+  color: var(--main);
+  transition: var(--trs);
+  cursor: default;
+}
+body .e.e1 {
+  left: 30%;
+  top: 18%;
+}
+body .e.e2 {
+  right: 30%;
+  bottom: 18%;
+}
+body .e.e3 {
+  left: 18%;
+  bottom: 20%;
+}
+body .e.e4 {
+  right: 10%;
+  bottom: 8%;
+}
+body .e.e5 {
+  right: 23%;
+  top: 8%;
+}
+body .e.e6 {
+  right: 25%;
+  top: 10%;
+}
+body .e.e7 {
+  left: 26%;
+  bottom: 48%;
+}
+body .e.e8 {
+  right: 17%;
+  bottom: 18%;
+}
+body .e.e9 {
+  left: 50%;
+  bottom: 20%;
+}
+body .e.e10 {
+  left: 38%;
+  top: 8%;
+}
+body .e.e11 {
+  left: 70%;
+  top: 80%;
+}
+body .e.e12 {
+  left: 18%;
+  bottom: 29%;
+}
+body .e.e13 {
+  left: 38%;
+  bottom: 2%;
+}
+body .e.e14 {
+  left: 22%;
+  top: 21%;
+}
+body .e.e15 {
+  right: 18%;
+  top: 28%;
+}
+body .e.e16 {
+  right: 68%;
+  top: 69%;
+}
+body .e.e17 {
+  left: 20%;
+  top: 28%;
+}
+body .e.e17 {
+  left: 20%;
+  top: 28%;
+}
+body .e.e18 {
+  right: 38%;
+  top: 80%;
+}
+body .e.e19 {
+  left: 38%;
+  top: 19%;
+}
+body .e.e20 {
+  right: 26%;
+  top: 26%;
+}
+body .e.e21 {
+  left: 13%;
+  top: 23%;
+}
+body .e.e22 {
+  left: 52%;
+  bottom: 21%;
+}
+body .e.e23 {
+  right: 85%;
+  top: 67%;
+}
+body .e.e24 {
+  right: 24%;
+  top: 26%;
+}
+body .e.e25 {
+  right: 18%;
+  bottom: 20%;
+}
+@keyframes round {
+  to {
+    transform: rotate(360deg);
+  }
+}
+body header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background: var(--bg);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 9999;
+}
+body header .brand {
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: var(--main);
+}
+body header .brand .logo {
+  width: auto;
+  height: 100%;
+}
+body header .links {
+  width: 50%;
+  height: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--trs) ease-in-out;
+}
+body header .links .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 65%;
+  z-index: 2;
+  transition: var(--trs);
+}
+body header .links .link a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: var(--main);
+  transition: var(--trs);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header .links .link a.active {
+  background: var(--main);
+  color: var(--bg);
+  letter-spacing: 1px;
+}
+body header .links .link a:hover {
+  background: var(--main);
+  color: var(--bg);
+  letter-spacing: 1px;
+}
+body header .links.active {
+  transform: translateX(0%);
+  transition: var(--trs) ease-in;
+}
+body header .btns {
+  width: 14%;
+  height: 95%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body header .btns .contactBtn {
+  width: 100px;
+  height: 65%;
+  background: transparent;
+  border: var(--border);
+  cursor: pointer;
+  color: var(--main);
+  transition: var(--trs);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header .btns .contactBtn:hover {
+  background: var(--main);
+  color: var(--bg);
+}
+body header .btns .mode {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border: var(--border);
+  border-radius: 30px;
+  cursor: pointer;
+}
+body header .btns .mode h3 {
+  position: absolute;
+  font-size: 25px;
+  bottom: -7.4px;
+  transition: var(--trs);
+  color: var(--main);
+}
+body header .btns .mode h3.moon {
+  right: 1px;
+  bottom: -7.4px;
+}
+body header .btns .ham {
+  width: 35px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: var(--trs);
+  z-index: 9999;
+}
+body header .btns .ham .line {
+  width: 100%;
+  height: 3px;
+  background: var(--main);
+  transition: var(--trs);
+}
+body header .btns .ham.x {
+  transition: var(--trs);
+}
+body header .btns .ham.x .line.line1 {
+  transform: rotate(-45deg) translate(-10px, 6px);
+}
+body header .btns .ham.x .line.line2 {
+  opacity: 0;
+}
+body header .btns .ham.x .line.line3 {
+  transform: rotate(45deg) translate(-13.5px, -9px);
+}
+body section {
+  position: relative;
+  width: 100%;
+  min-height: 100lvh;
+  text-align: center;
+}
+body section.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body section.home h1 {
+  text-align: center;
+  color: var(--main);
+  font-size: 80px;
+}
+body section.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body section.services h1 {
+  font-size: 80px;
+  color: var(--main);
+}
+body section.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body section.about h1 {
+  font-size: 80px;
+  color: var(--main);
+}
+body section.clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body section.clients h1 {
+  font-size: 80px;
+  color: var(--main);
+}
+body section.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body section.contact h1 {
+  font-size: 80px;
+  color: var(--main);
+}
+body footer {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+body footer .top {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--main);
+}
+body footer .top .c {
+  color: var(--bg);
+  font-size: 23px;
+}
+body footer .bottom {
+  width: 100%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body footer .bottom .items_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body footer .bottom .items_container .items {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+body footer .bottom .items_container .items .item {
+  width: -moz-max-content;
+  width: max-content;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  transition: var(--trs);
+}
+body footer .bottom .items_container .items .item:hover {
+  background: var(--main);
+}
+body footer .bottom .items_container .items .item:hover a {
+  color: var(--bg);
+  letter-spacing: 2px;
+}
+body footer .bottom .items_container .items .item a {
+  text-decoration: none;
+  color: var(--main);
+}
+
+@keyframes linkMove {
+  from {
+    opacity: 0;
+    transform: translateX(70%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0%);
+  }
+}
+@media (max-width: 1255px) {
+  .ham {
+    display: flex !important;
+  }
+  .links {
+    width: 320px !important;
+    height: 100vh;
+    position: fixed;
+    justify-content: center !important;
+    flex-direction: column;
+    gap: 60px;
+    top: 0;
+    right: 0;
+    background: var(--bg);
+    z-index: 999;
+    transform: translateX(200%);
+  }
+  .links .link {
+    height: 30px !important;
+  }
+  .btns {
+    width: 70% !important;
+    justify-content: center !important;
+    gap: 30px;
+  }
+  .btns .contactBtn {
+    width: 100px;
+  }
+  footer {
+    height: 50vh !important;
+  }
+  footer .items_container .items .item a {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=style.css.map */

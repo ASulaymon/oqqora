@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black and white modern website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="/img/favicons/favicon_white/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="cursor"></div>
+    <header>
+        <a href="index.html" class="brand">
+            <img src="/img/favicons/favicon_white/favicon.ico" class="logo">
+            <h1>Logo</h1>   
+        </a>
+        <ul class="links">
+            
+            <li class="link link1 active">
+                <a href="#home">Bosh sahifa</a>
+
+            </li>
+            <li class="link link2">
+                <a href="#ser">Hizmatlar</a>
+
+            </li>
+            <li class="link link3">
+                <a href="#about">Biz haqimizda</a>
+
+            </li>
+            <li class="link link4">
+                <a href="#clients">Mijozlar</a>
+
+            </li>
+            <li class="link link5">
+                <a href="#contact">Bog'lanish</a>
+
+            </li>
+        </ul>
+        <div class="btns">
+            <button class="contactBtn">Qo'ng'iroq</button>
+            <div class="mode">
+                <h3>◐</h3>
+            </div>
+            <button class="ham">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+            </button>
+        </div>
+    </header>
+    <section class="home" id="home">
+        <div class="e e1" data="1">△</div>
+        <div class="e e2" data="-2">□</div>
+        <div class="e e3" data="-1">○</div>
+        <div class="e e4" data="2">◁</div>
+        <div class="e e5" data="1.5">◯</div>
+        <h1 class="hvr">
+            Oq va qora ranglar bilan zamonaviy qarash!
+        </h1>
+    </section>
+    <section class="services" id="ser">
+        <h1 class="hvr">
+            Hizmatlar
+        </h1>
+        <div class="e e6" data="1.2">■</div>
+        <div class="e e7" data="-2.3">△</div>
+        <div class="e e8" data="-1.4">○</div>
+        <div class="e e9" data="2.5">▦</div>
+        <div class="e e10" data="1.6">◡</div>
+    </section>
+    <section class="about" id="about">
+        <h1>Biz haqimizda</h1>
+        <div class="e e11" data="1.2">▢</div>
+        <div class="e e12" data="-2.3">◖</div>
+        <div class="e e13" data="-1.4">◌</div>
+        <div class="e e14" data="2.5">◁</div>
+        <div class="e e15" data="1.6">◀</div>
+    </section>
+    <section class="clients" id="clients">
+        <h1>Mijozlar</h1>
+        <div class="e e16" data="1.2">⊞</div>
+        <div class="e e17" data="-2.3">⩤</div>
+        <div class="e e18" data="-1.4">◥</div>
+        <div class="e e19" data="2.5">⨁</div>
+        <div class="e e20" data="1.6">⊠</div>
+    </section>
+    <section class="contact" id="contact">
+        <h1>Biz bilan bog'laning</h1>
+        <div class="e e21" data="1.2">⊞</div>
+        <div class="e e22" data="-2.3">⩤</div>
+        <div class="e e23" data="-1.4">◥</div>
+        <div class="e e24" data="2.5">⨁</div>
+        <div class="e e25" data="1.6">⊠</div>
+    </section>
+    <footer>
+        <div class="top">
+            <p class="c">&copy ASulaymon</p>
+        </div>
+        <div class="bottom">
+            <div class="items_container">
+                <div class="items items1">
+                    <div class="item item1">
+                        <a href="">Bosh sahifa</a>
+                    </div>
+                    <div class="item item2">
+                        <a href="">Hizmatlar</a>
+                    </div>
+                    <div class="item item3">
+                        <a href="">Biz haqimizda</a>
+                    </div>
+                    <div class="item item4">
+                        <a href="">Mijozlar</a>
+                    </div>
+                    <div class="item item5">
+                        <a href="">Biz bilan bog'laning</a>
+                    </div>
+                </div>
+                <div class="items items2">
+                    <div class="item item1">
+                        <a href="https://asulaymon.netlify.app">ASulaymon</a>
+                    </div>
+                    <div class="item item2">
+                        <a href="">Blog</a>
+                    </div>
+                    <div class="item item3">
+                        <a href="">ASulaymon web</a>
+                    </div>
+                    <div class="item item4">
+                        <a href="">ASulaymon design</a>
+                    </div>
+                    <div class="item item5">
+                        <a href="tel:+998976051234">Phone</a>
+                    </div>
+                </div>
+                <div class="items items3">  
+                    <div class="item item1">
+                        <a href="">link1</a>
+                    </div>
+                    <div class="item item2">
+                        <a href="">link2</a>
+                    </div>
+                    <div class="item item3">
+                        <a href="">link3</a>
+                    </div>
+                    <div class="item item4">
+                        <a href="">link4</a>
+                    </div>
+                    <div class="item item5">
+                        <a href="">link5</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    $(window).scroll(() =>{
+        if($(window).scrollTop()){ 
+            $("header").addClass("active")
+        }
+        else{
+            $("header").removeClass("active")
+        }
+    })
+</script>
+<script src="js/script.js"></script>
+</html>
